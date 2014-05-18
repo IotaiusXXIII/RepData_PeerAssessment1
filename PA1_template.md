@@ -21,7 +21,7 @@ We produce histogram for
 
 ```r
 hist(tapply(data$steps, data$date, sum), col = "cyan", main = "Histogram of total number of steps taken each day", 
-    xlab = "Total number of steps taken each day", bg = "white")
+    xlab = "Total number of steps taken each day")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
@@ -62,7 +62,7 @@ colnames(data_1) <- c("interval", "average_steps")
 
 ```r
 plot(data_1$interval, data_1$average_steps, type = "l", main = "Average number of steps by 5-minute interval", 
-    xlab = "Time interval", ylab = "Average number of steps", bg = "white")
+    xlab = "Time interval", ylab = "Average number of steps")
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
@@ -102,7 +102,7 @@ Below, histogram with new dataset on total number of steps taken each day is pro
 
 ```r
 hist(tapply(data_replaced$steps, data_replaced$date, sum), col = "green", main = "Histogram of total number of steps in one day", 
-    xlab = "Total number of steps in one  day", bg = "white")
+    xlab = "Total number of steps in one  day")
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
@@ -155,8 +155,7 @@ Then we make two panel plot with lattice package.
 library(lattice)
 
 xyplot(data_last$step ~ data_last$interval | data_last$day, layout = c(1, 2), 
-    type = "l", xlab = "5-minute interval", ylab = "Average number of steps", 
-    bg = "white")
+    type = "l", xlab = "5-minute interval", ylab = "Average number of steps")
 ```
 
 ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
